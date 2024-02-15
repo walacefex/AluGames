@@ -3,8 +3,8 @@ package br.com.alura.alugames.principal
 import br.com.alura.alugames.modelo.Gamer
 import br.com.alura.alugames.modelo.Jogo
 import br.com.alura.alugames.servicos.ConsumoApi
-import java.util.Scanner
 import br.com.alura.alugames.utilitario.tranformarEmIdade
+import java.util.Scanner
 
 
 fun main() {
