@@ -1,21 +1,26 @@
 package br.com.alura.alugames.principal
-
 import br.com.alura.alugames.modelo.Gamer
-
 fun main() {
-    val gamer1 = Gamer("Walace", "walacefex01@gmail.com")
+    val gamer1 = Gamer("Walace", "walace@email.com")
     println(gamer1)
 
-    val gamer2 = Gamer("Natalia", "evelynat.x@gmail.com", "09/10/1996", "evelynat")
+    val gamer2 = Gamer(
+        "Natalia",
+        "natalia@email.com",
+        "24/08/1990",
+        "evelynat")
+
     println(gamer2)
 
-    gamer1.let{
-        it.dataNascimento = "23/12/1997"
-        it.usuario = "Walacefex"
+    gamer1.let {
+        it.dataNascimento = "22/10/1990"
+        it.usuario = "walacefex"
+
     }.also {
         println(gamer1.idInterno)
     }
+
     println(gamer1)
-    gamer1.usuario = "Walle"
+    gamer1.usuario = "walace"
     println(gamer1)
 }

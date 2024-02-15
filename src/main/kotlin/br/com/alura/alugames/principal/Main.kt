@@ -4,6 +4,7 @@ import br.com.alura.alugames.modelo.Gamer
 import br.com.alura.alugames.modelo.Jogo
 import br.com.alura.alugames.servicos.ConsumoApi
 import java.util.Scanner
+import tranformarEmIdade
 
 
 fun main() {
@@ -11,6 +12,7 @@ fun main() {
     val gamer = Gamer.criarGamer(leitura)
     println("Cadastro concluído com sucesso. Dados do gamer:")
     println(gamer)
+    println("Idade do gamer: " + gamer.dataNascimento?.tranformarEmIdade())
 
     do {
         println("Digite um código de jogo para buscar:")
@@ -53,13 +55,14 @@ fun main() {
 
     } while (resposta.equals("s", true))
 
-    println("Jogos buscados")
+    println("Jogos buscados:")
     println(gamer.jogosBuscados)
-    println("Busca finalizada com sucesso.")
+
     println("\n Jogos ordenados por título: ")
     gamer.jogosBuscados.sortBy {
         it?.titulo
     }
+
     gamer.jogosBuscados.forEach {
         println("Título: " + it?.titulo)
     }
@@ -69,6 +72,7 @@ fun main() {
     }
     println("\n Jogos filtrados: ")
     println(jogosFiltrados)
+
     println("Deseja excluir algum jogo da lista original? S/N")
     val opcao = leitura.nextLine()
     if (opcao.equals("s", true)) {
@@ -77,6 +81,7 @@ fun main() {
         val posicao =leitura.nextInt()
         gamer.jogosBuscados.removeAt(posicao)
     }
+
     println("\n Lista atualizada:")
     println(gamer.jogosBuscados)
 
