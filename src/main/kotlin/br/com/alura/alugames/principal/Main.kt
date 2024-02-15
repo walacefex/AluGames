@@ -7,6 +7,7 @@ import java.util.Scanner
 
 fun main() {
     val leitura = Scanner(System.`in`)
+    do {
     println("Digite um código de jogo para buscar:")
     val busca = leitura.nextLine()
 
@@ -36,15 +37,16 @@ fun main() {
             meuJogo?.descricao = descricaoPersonalizada
         } else {
             meuJogo?.descricao = meuJogo?.titulo
-
         }
 
         println(meuJogo)
     }
 
-    resultado.onSuccess {
-        println("Busca finalizada com sucesso.")
-    }
+    println("Deseja buscar um novo Jogo? S/N")
+    val resposta = leitura.nextLine()
 
+    } while(resposta.equals("s", true))
+
+    println("Busca finalizada com sucesso.")
 
 }
