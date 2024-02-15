@@ -4,7 +4,7 @@ import br.com.alura.alugames.modelo.Gamer
 import br.com.alura.alugames.modelo.Jogo
 import br.com.alura.alugames.servicos.ConsumoApi
 import java.util.Scanner
-import tranformarEmIdade
+import br.com.alura.alugames.utilitario.tranformarEmIdade
 
 
 fun main() {
